@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // import { createStore } from "redux";
 
-import store from './redux/reducers/index';
+import store from './redux/store';
 
 import './index.less';
 import App from './app';
