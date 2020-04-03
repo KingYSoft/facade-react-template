@@ -27,7 +27,11 @@ module.exports = {
     semi: ['error', 'always'],
     'linebreak-style': ['error', 'windows'],
     'no-useless-call': 'off',
-    'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
+    'space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'never',
+      asyncArrow: 'always'
+    }],
     '@typescript-eslint/interface-name-prefix': ['off'],
     '@typescript-eslint/no-empty-interface': ['off']
   }

@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -30,8 +27,9 @@ class Home extends React.PureComponent<IProps, PageState> {
 }
 
 // 将 reducer 中的状态插入到组件的 props 中
-const mapStateToProps = ({}: PageStateProps) => ({});
+// eslint-disable-next-line
+const mapStateToProps = ({}: PageStateProps): PageStateProps => ({});
 
 // 将 对应action 插入到组件的 props 中
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (): PageDispatchProps => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

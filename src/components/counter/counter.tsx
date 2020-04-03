@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import * as React from 'react';
 import { connect } from 'react-redux';
 import './counter.less';
@@ -14,7 +12,7 @@ interface PageStateProps {
 type PageDispatchProps = {
   onIncrement: () => void;
   onDecrement: () => void;
-  onDecrementAsync: () => any;
+  onDecrementAsync: () => void;
 };
 
 type PageOwnProps = {
@@ -48,15 +46,16 @@ class Counter extends React.PureComponent<IProps, PageState> {
 }
 
 // // 将 reducer 中的状态插入到组件的 props 中
-const mapStateToProps = ({ counter }: PageStateProps) => ({
+const mapStateToProps = ({ counter }: PageStateProps): PageStateProps => ({
   counter: counter
 });
 
 // 将 对应action 插入到组件的 props 中
-const mapDispatchToProps = (dispatch: any) => ({
-  onDecrement: () => dispatch(decrement()),
-  onIncrement: () => dispatch(increment()),
-  onDecrementAsync: () => dispatch(decrementAsync())
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mapDispatchToProps = (dispatch: any): PageDispatchProps => ({
+  onDecrement: (): void => dispatch(decrement()),
+  onIncrement: (): void => dispatch(increment()),
+  onDecrementAsync: (): void => dispatch(decrementAsync())
 });
 // 使用 connect 高阶组件对 Counter 进行包裹
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

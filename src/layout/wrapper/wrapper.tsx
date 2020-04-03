@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Layout, BackTop } from 'antd';
@@ -7,6 +6,7 @@ import logo from '../../logo.svg';
 
 const { Header, Content, Footer } = Layout;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Wrapper: React.FC = (props: any) => {
   return (
     <Layout className="appLayout">

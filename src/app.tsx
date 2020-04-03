@@ -31,9 +31,9 @@ class App extends React.PureComponent<IProps, PageState> {
 }
 
 // // 将 reducer 中的状态插入到组件的 props 中
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const mapStateToProps = ({}) => ({});
+// eslint-disable-next-line
+const mapStateToProps = ({}: PageStateProps): PageStateProps => ({});
 
 // 将 对应action 插入到组件的 props 中
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (): PageDispatchProps => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(App);
