@@ -8,6 +8,8 @@
 |   ├── index.html
 ├── src                             源码目录
 |   ├── components                  公共组件目录
+|   ├── layout                      布局配置
+|   ├── models                      公共类型定义目录
 |   ├── iamges                      公共图片目录
 |   ├── pages                       页面文件目录
 |   |   ├── home                    home 页面目录
@@ -19,7 +21,8 @@
 |   |   ├── reducers                reducers目录
 |   |   ├── types                   types目录，redux类型
 |   |   ├── store                   store配置目录
-|   ├── utils                       公共方法库
+|   ├── routes                      路由配置
+|   ├── services                    公共服务
 |   ├── app.less                    app项目样式
 |   └── app.tsx                     app项目入口
 |   ├── index.less                  项目样式
