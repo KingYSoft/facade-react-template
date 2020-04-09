@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aspnet/signalr": "^1.1.4",
     "@testing-library/jest-dom": "^5.3.0",
     "@testing-library/react": "^10.0.2",
     "@testing-library/user-event": "^10.0.1",
@@ -45,7 +46,7 @@
     "pre-commit": "^1.2.2"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "set PORT=8080&& react-app-rewired start",
     "build": "set GENERATE_SOURCEMAP=false&& react-app-rewired build",
     "ningbo": "set GENERATE_SOURCEMAP=false&& set REACT_APP_LOCATION=ningbo&& react-app-rewired build",
     "test": "react-app-rewired test",

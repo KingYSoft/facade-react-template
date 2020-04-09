@@ -17,6 +17,10 @@ type PageState = {};
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
 
 class Home extends React.PureComponent<IProps, PageState> {
+  constructor(props: IProps) {
+    super(props);
+    console.log('home');
+  }
   public render(): JSX.Element {
     return (
       <div className="home">
